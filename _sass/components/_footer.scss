@@ -1,0 +1,21 @@
+.footer {
+  padding: 1em 0;
+}
+
+.footer_menu {
+  &__link {
+    color: $text-color;
+    font-size: 80%;
+
+    &:hover,
+    &:focus {
+      background: none;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .footer {
+    text-align: center;
+  }
+}

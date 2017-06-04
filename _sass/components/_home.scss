@@ -1,0 +1,13 @@
+.home {
+  &__section {
+
+  }
+
+  &__title {
+    font-size: 1em;
+    color: $main-color
+  }
+}
+
+@media (min-width: $mobile) {
+}

@@ -1,0 +1,27 @@
+{% comment %}
+From https://github.com/oncleben31/jekyll-date-basic-i18n
+{% endcomment %}
+
+{% assign date_format_to_be_translated = include.format | default: site.date_format | default: "%b %-d, %Y" %}
+
+{% assign num_day = include.date | date: "%w" | plus: 0 %}
+{% assign num_month = include.date | date: "%-m" | plus: -1 %}
+{% assign lang = include.lang | default: page.lang | default: site.lang %}
+
+{% if site.data.locales[lang].abbreviated_weekday[num_day] %}
+{% assign date_format_to_be_translated = date_format_to_be_translated | replace: "%a",  site.data.locales[lang].abbreviated_weekday[num_day] %}
+{% endif %}
+
+{% if site.data.locales[lang].full_weekday[num_day] %}
+{% assign date_format_to_be_translated = date_format_to_be_translated | replace: "%A",  site.data.locales[lang].full_weekday[num_day] %}
+{% endif %}
+
+{% if site.data.locales[lang].abbreviated_month[num_month] %}
+{% assign date_format_to_be_translated = date_format_to_be_translated | replace: "%b",  site.data.locales[lang].abbreviated_month[num_month] %}
+{% endif %}
+
+{% if site.data.locales[lang].full_month[num_month] %}
+{% assign date_format_to_be_translated = date_format_to_be_translated | replace: "%B",  site.data.locales[lang].full_month[num_month] %}
+{% endif %}
+
+{{ include.date | date: date_format_to_be_translated }}

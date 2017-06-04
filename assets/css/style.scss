@@ -1,6 +1,12 @@
 ---
 ---
 
-@import "components/navbar.scss";
-@import "components/popover.scss";
-@import "components/header.scss";
+@import "variables";
+@import "helpers";
+@import "main";
+
+@import "components/menu";
+@import "components/home";
+@import "components/footer";
+@import "components/content";
+@import "components/post";

@@ -1,0 +1,17 @@
+<section class="post">
+  <header class="post__header">
+    <a href="{{ post.url }}" class="post__title_link">
+      <h3 class="post__title">{{ post.title }}</h3>
+    </a>
+
+    <p class="post__meta">
+      {% include translated_date.html date=post.date format="%d %B %Y" %}
+    </p>
+  </header>
+
+  <div class="post__description">
+    <p>
+      {{ post.excerpt }}
+    </p>
+  </div>
+</section>
