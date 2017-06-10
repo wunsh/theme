@@ -7,8 +7,9 @@
   }
 
   &__title {
+    @include header-font;
+
     font-size: 1.75em;
-    font-weight: 800;
     color: $header-color;
     margin: 0.5em 0 0.2em;
   }
@@ -30,7 +31,8 @@
   }
 
   &__description {
-    font-family: Georgia, "Cambria", serif;
+    @include text-font;
+
     color: #444;
     line-height: 1.8em;
   }

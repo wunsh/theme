@@ -1,0 +1,8 @@
+@mixin header-font {
+  font-family: $header-font, sans-serif;
+  font-weight: normal;
+}
+
+@mixin text-font {
+  font-family: $text-font, serif;
+}

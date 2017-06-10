@@ -9,17 +9,23 @@
   margin: 3em auto;
 
   &__title {
-    font-size: 2em;
+    @include header-font;
+
+    font-size: 2.35em;
+    line-height: 1em;
     font-weight: bold;
     margin: 0;
     text-transform: uppercase;
   }
 
   &__tagline {
+    @include header-font;
+
     margin: 0;
     font-size: 1.5em;
-    font-weight: 300;
-    color: $header-color;
+    font-weight: 200;
+    margin-top: 0.25em;
+    color: $text-color;
     white-space: nowrap;
   }
 }
@@ -30,6 +36,8 @@
   list-style: none;
 
   &__item {
+    @include header-font;
+
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -61,7 +69,7 @@
   }
 
   .header {
-    margin: 4.375em 2em 0;
+    margin: 4.25rem 1.75rem 0;
     text-align: right;
   }
 }
