@@ -1,0 +1,26 @@
+.intro {
+  text-align: center;
+  margin: 2em 0;
+
+  &__title {
+    @include text-font;
+
+    font-weight: normal;
+    color: $main-color;
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    font-variant: small-caps;
+  }
+
+  &__subtitle {
+    @include header-font;
+
+    color: $header-color;
+    font-size: 0.875rem;
+    margin: 0.5rem 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+  }
+}
