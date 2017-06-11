@@ -1,0 +1,7 @@
+{% include tags.html %}
+
+<ul class="tags_cloud__list">
+  {% for tag in tags %}
+    <a href="/tags/#{{ tag | slugify }}" class="tags_cloud__link tag tag--{{ tag | slugify }}">{{ tag }}</a>
+  {% endfor %}
+</ul>

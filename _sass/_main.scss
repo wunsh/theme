@@ -15,6 +15,11 @@ a {
   }
 }
 
+h1,
+h2 {
+  @include header-font;
+}
+
 h3 {
   font-weight: 100;
 }

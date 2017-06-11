@@ -1,0 +1,15 @@
+{% include tags.html %}
+
+
+<h1>Статьи по тегам</h1>
+
+{% for tag in tags %}
+  <h2 id="{{ tag | slugify }}" class="tag tag--{{ tag }}">{{ tag }}</h2>
+  <ul class="simple_list">
+    {% for post in site.tags[tag] %}
+      <li>
+          <a href="{{ post.url }}" class="simple_link">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}

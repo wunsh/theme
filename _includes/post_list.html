@@ -4,9 +4,13 @@
       <h3 class="post__title">{{ post.title }}</h3>
     </a>
 
-    <p class="post__meta">
+    <div class="post__meta">
       {% include translated_date.html date=post.date format="%d %B %Y" %}
-    </p>
+
+      <span class="tag_cloud tags_cloud--inline">
+        {% include tags_cloud.html post_tags=post.tags %}
+      </span>
+    </div>
   </header>
 
   <div class="post__description">

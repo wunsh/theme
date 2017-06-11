@@ -1,0 +1,6 @@
+{% if include.post_tags %}
+  {% assign tags = include.post_tags %}
+{% else %}
+  {% capture tags_string %}{% for tag in site.tags %}{{ tag.first }},{% endfor %}{% endcapture %}
+  {% assign tags = tags_string | split: "," | sort %}
+{% endif  %}
