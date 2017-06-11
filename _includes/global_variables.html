@@ -1,0 +1,3 @@
+{% assign current_page = paginator.page %}
+{% assign first_page = false %}{% if current_page == 1 %}{% assign first_page = true %}{% endif %}
+{% assign offset = 0 %}{% if first_page %}{% assign offset = 1 %}{% endif %}

@@ -18,6 +18,17 @@
     text-transform: uppercase;
   }
 
+  &__title_link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $grey-color;
+    }
+  }
+
   &__tagline {
     @include header-font;
 
