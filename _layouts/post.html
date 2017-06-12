@@ -10,7 +10,7 @@ layout: default
       {{ page.title }}
       <small class="post__date">
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-          {% include date.html %}
+          {% include translated_date.html date=page.date format="%d %B %Y" %}
         </time>
       </small>
     </h1>
