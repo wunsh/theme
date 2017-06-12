@@ -1,40 +1,19 @@
 .post {
-  padding-bottom: 1em;
-
-  &--main {
-    margin: 0;
-    padding: 0;
-  }
+  margin-top: 2.9rem;
 
   &__title {
-    @include header-font;
-
-    font-size: 1.75em;
     color: $header-color;
-    margin: 0.5em 0 0.2em;
+    margin-bottom: 0.45em;
   }
 
-  &__title_link {
+  &__date {
     color: $text-color;
+    font-size: 0.45em;
+    line-height: 2em;
+    vertical-align: text-top;
+    white-space: nowrap;
 
-    &:hover {
-      .post__title {
-        color: $text-color;
-      }
-    }
-  }
-
-  &__cover {
-    border-radius: 50px;
-    float: right;
-    margin-left: 1em;
-  }
-
-  &__description {
-    @include text-font;
-
-    color: #444;
-    line-height: 1.8em;
+    time { display: inline; }
   }
 
   &__meta {
@@ -44,37 +23,29 @@
     text-transform: uppercase;
   }
 
-  &__category {
-    margin: 0 0.1em;
-    padding: 0.3em 1em;
-    color: #fff;
-    background: #999;
-    font-size: 80%;
-  }
+  &__content {
+    @include text-font;
 
-  &__images {
-    margin: 1em 0;
-  }
+    color: $text-color;
 
-  &__image_meta {
-    margin-top: -3.5em;
-    margin-left: 1em;
-    color: #fff;
-    text-shadow: 0 1px 1px #333;
-  }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $header-color;
+    }
 
-  &__category {
-    &--design {
-      background: #5aba59;
+    p {
+      line-height: 1.45em;
     }
-    &--pure {
-      background: #4d85d1;
+
+    img {
+      max-width: 100%;
     }
-    &--yui {
-      background: #8156a7;
-    }
-    &--js {
-      background: #df2d4f;
+
+    li {
+      margin-bottom: 0.5em;
     }
   }
 }

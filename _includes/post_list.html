@@ -1,10 +1,10 @@
-<section class="post">
-  <header class="post__header">
-    <a href="{{ post.url }}" class="post__title_link">
-      <h3 class="post__title">{{ post.title }}</h3>
+<section class="post_small">
+  <header class="post_small__header">
+    <a href="{{ post.url }}" class="post_small__title_link">
+      <h3 class="post_small__title">{{ post.title }}</h3>
     </a>
 
-    <div class="post__meta">
+    <div class="post_small__meta">
       {% include translated_date.html date=post.date format="%d %B %Y" %}
 
       <span class="tag_cloud tags_cloud--inline">
@@ -13,7 +13,7 @@
     </div>
   </header>
 
-  <div class="post__description">
+  <div class="post_small__description">
     <p>
       {{ post.excerpt }}
     </p>

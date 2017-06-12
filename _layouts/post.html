@@ -2,4 +2,40 @@
 layout: default
 ---
 
-{{ content }}
+{% assign author = site.authors[page.author] %}
+
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post__header">
+    <h1 class="post__title" itemprop="name headline">
+      {{ page.title }}
+      <small class="post__date">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% include date.html %}
+        </time>
+      </small>
+    </h1>
+
+    <div class="post__meta">
+      {% include translated_date.html date=page.date format="%d %B %Y" %}
+
+      <span class="tag_cloud tags_cloud--inline">
+        {% include tags_cloud.html post_tags=page.tags %}
+      </span>
+    </div>
+  </header>
+
+  <div class="post__content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <div class="post__information">
+    <small itemprop="author" itemscope itemtype="http://schema.org/Person">
+      {% if page.source_url %}
+      Оригинальный текст&nbsp;&mdash; <a href="{{ page.source_url }}">{{ page.source_author }}</a><br>
+      Над переводом работал{% if author.gender == "female" %}а{% endif %} <span itemprop="name">{{ author.name }}</span>
+      {% elsif author %}
+      Автор &mdash; <span itemprop="name">{{ author.name }}</span>
+      {% endif %}
+    </small>
+  </div>
+</article>

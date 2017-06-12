@@ -1,12 +1,12 @@
-<section class="post post--main">
-  <header class="post__header">
-    <img width="48" height="48" class="post__cover" src="cover.png">
+<section class="post_small post_small--main">
+  <header class="post_small__header">
+    <img width="48" height="48" class="post_small__cover" src="cover.png">
 
     <a href="{{ main_post.url }}" class="post__title_link">
-      <h3 class="post__title">{{ main_post.title }}</h3>
+      <h3 class="post_small__title">{{ main_post.title }}</h3>
     </a>
 
-    <div class="post__meta">
+    <div class="post_small__meta">
       {% include translated_date.html date=main_post.date format="%d %B %Y" %}
 
       <span class="tag_cloud tags_cloud--inline">
@@ -15,7 +15,7 @@
     </div>
   </header>
 
-  <div class="post__description">
+  <div class="post_small__description">
     <p>
       {{ main_post.excerpt }}
     </p>

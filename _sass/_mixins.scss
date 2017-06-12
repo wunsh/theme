@@ -6,3 +6,7 @@
 @mixin text-font {
   font-family: $text-font, serif;
 }
+
+%vertical-rhythm {
+  margin-bottom: $spacing-unit / 2;
+}
