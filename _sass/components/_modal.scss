@@ -1,0 +1,58 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in;
+     -moz-transition: opacity 150ms ease-in;
+          transition: opacity 150ms ease-in;
+  pointer-events: none;
+
+  &:target {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__content {
+    width: 80%;
+    max-width: 480px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    background: $link-color;
+    border-radius: 3px;
+  }
+
+  &__title {
+    margin-top: 0.75rem;
+  }
+
+  &__input {
+    display: inline-block !important;
+    margin: .25em auto .3em;
+  }
+
+  &__close {
+    background: $header-color;
+    color: $link-color;
+    line-height: 25px;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    text-align: center;
+    width: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background: $text-color;
+      color: $grey-color;
+      text-decoration: none;
+    }
+  }
+}

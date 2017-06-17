@@ -39,6 +39,22 @@
     color: $text-color;
     white-space: nowrap;
   }
+
+  &__subscribe_link {
+    background: rgba(0,0,0,0);
+    border: 2px solid #fff;
+    font-variant: small-caps;
+    color: #fff;
+    border-radius: 25px;
+    margin-top: 36px;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $header-color;
+      border-color: $header-color;
+    }
+  }
 }
 
 .nav_list {

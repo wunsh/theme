@@ -4,6 +4,7 @@
 @import "variables";
 @import "mixins";
 @import "helpers";
+@import "buttons";
 @import "syntax_highlighting";
 @import "main";
 
@@ -16,3 +17,4 @@
 @import "components/intro";
 @import "components/tags_cloud";
 @import "components/pagination";
+@import "components/modal";
