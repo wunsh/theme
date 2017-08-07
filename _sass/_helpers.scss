@@ -1,9 +1,9 @@
-.responsive_image {
+.h-responsive_image {
   max-width: 100%;
   height: auto;
 }
 
-.simple_link {
+.h-simple_link {
   color: $text-color;
   text-decoration: underline;
 
@@ -13,12 +13,12 @@
   }
 }
 
-.simple_list {
+.h-simple_list {
   list-style: none;
   padding-left: 1em;
 }
 
-.tc { text-align: center; }
+.h-tc { text-align: center; }
 
 .h-no_margin {
   margin: 0 !important;
