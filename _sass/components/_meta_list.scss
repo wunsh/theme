@@ -1,0 +1,23 @@
+.meta_list {
+  list-style: none;
+  padding: 0;
+  margin: 6px 0 22px;
+
+  &__item {
+    display: block;
+    margin-right: 22px;
+    line-height: 22px;
+  }
+
+  &__item_name {
+    margin-right: 6px;
+  }
+}
+
+@media (min-width: $mobile) {
+  .meta_list {
+    &__item {
+      display: inline-block;
+    }
+  }
+}

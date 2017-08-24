@@ -24,37 +24,29 @@
   &__list {
     display: inline-block;
     text-align: center;
-    margin: 3px 0 12px;
+    margin: 0;
     padding: 0;
   }
 }
 
 .tag {
-  color: #fff;
-  background: #4b2e39;
+  color: #4b2e39;
+  font-weight: bold;
+  background: #eee;
+
   padding: 3px 6px;
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 0.9em;
   margin-bottom: 4px;
   display: inline-block;
+  line-height: 14px;
 
   &:hover,
   &:focus {
     text-decoration: none;
     opacity: 0.75;
   }
-
-  &--ruby { background: #9b111e; }
-  &--practical { background: #00a550; }
-  &--phoenix { background: #ff9900; }
-  &--rails { background: #f80000; }
-  &--beginner { background: #00bfff; }
-  &--advanced { background: #ff0000; }
-  &--overview { background: #7fc7ff; }
-  &--docker { background: #1488c6; }
-  &--howto { background: #2e852e; }
-  &--deploy { background: #4d220e; }
 }
 
 @media (min-width: $mobile) {

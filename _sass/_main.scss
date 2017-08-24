@@ -16,13 +16,12 @@ a {
 }
 
 figure, .highlighter-rouge {
-  margin: 0;
+  margin: 0 2px 0 0;
 
   pre, .highlight {
     background: $grey-color;
     padding: 0.75em 1em;
-    border-radius: 4px;
-    border: 1px solid #ddd;
+    border-radius: 2px;
 
     code {
       background: none;
@@ -35,15 +34,14 @@ figure, .highlighter-rouge {
 
 code {
   background: $grey-color;
+  color: $header-color;
   padding: 1px 5px;
   border-radius: 2px;
-  border: 1px solid #ddd;
 }
 
 blockquote {
   font-style: italic;
   border-left: 3px solid $main-color;
-  padding-left: 0.5em;
   padding: 0.25em 0 0.25em 0.5em;
 }
 
