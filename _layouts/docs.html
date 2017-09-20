@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post post--docs" itemscope itemtype="http://schema.org/BlogPosting">
+    <header class="post__header">
+        <h1 class="post__title" itemprop="name headline">
+            {{ page.title }}
+        </h1>
+    </header>
+
+    <div class="post__content" itemprop="articleBody">
+        {{ content }}
+    </div>
+</article>
+
+<nav class="docs_nav pure-g">
+    <div class="docs_nav__inner pure-u-1 pure-u-md-3-4">
+        {% if page.prev_page %}
+            <a href="/docs/{{page.prev_page}}.html" class="docs_nav__link docs_nav__link--prev pure-button disabled">&larr; Предыдущий раздел</a>
+        {% endif %}
+
+        {% if page.next_page %}
+            <a href="/docs/{{page.next_page}}.html" class="docs_nav__link docs_nav__link--next pure-button">Следующий раздел &rarr;</a>
+        {% endif %}
+    </div>
+</nav>

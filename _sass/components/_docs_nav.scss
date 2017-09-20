@@ -1,0 +1,34 @@
+.docs_nav {
+  position: fixed;
+  height: $docs-nav-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  &__inner {
+    background: #fff;
+  }
+
+  &__link {
+    width: 49%;
+    height: 100%;
+    line-height: 2.25;
+    vertical-align: middle;
+
+    &--prev {
+      float: left;
+    }
+
+    &--next {
+      float: right;
+    }
+  }
+}
+
+@media (min-width: $mobile) {
+  .docs_nav {
+    &__inner {
+      margin-left: 25%;
+    }
+  }
+}

@@ -1,5 +1,9 @@
 .footer {
   padding: 1em 0;
+
+  &--docs {
+    margin-bottom: $docs-nav-height;
+  }
 }
 
 .footer_menu {
