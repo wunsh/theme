@@ -40,9 +40,16 @@ code {
 }
 
 blockquote {
-  font-style: italic;
-  border-left: 3px solid $main-color;
-  padding: 0.25em 0 0.25em 0.5em;
+  @include header-font;
+
+  margin: 1.875rem 0 2.625rem;
+  border: 0.1875rem solid $text-color;
+  padding: 0 0.9rem;
+  font-variant: small-caps;
+  font-style: normal;
+  font-size: 1.2em;
+  color: $header-color;
+  border-radius: 1px;
 }
 
 h1,
@@ -56,4 +63,10 @@ h3 {
 
 .wunsh {
   padding: 0;
+}
+
+@media (min-width: $mobile) {
+  blockquote {
+    margin-left: -1rem;
+  }
 }

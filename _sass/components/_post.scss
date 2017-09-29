@@ -42,17 +42,78 @@
     }
 
     p {
-      line-height: 1.6em;
-      font-size: 1.125em;
-      margin-bottom: 1.25em;
+      line-height: 1.6;
+      font-size: 1.125rem;
+      margin-bottom: 1.25rem;
     }
 
     img {
+      display: block;
       max-width: 100%;
+      width: 650px;
+      border: 3px solid #faf7ff;
+      padding: 0.3125rem;
+      margin: 2rem auto 2.5rem;
+      border-radius: 1px;
+    }
+
+    ol, ul {
+      margin-bottom: 2rem;
+
+      li {
+        &::before {
+          color: $header-color;
+          display: inline-block;
+          width: 1rem;
+          margin-left: 0;
+          font-size: 0.75rem;
+          float: left;
+        }
+      }
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: li;
+
+      li {
+        counter-increment: li;
+
+        &::before {
+          content: counter(li) ")";
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        &::before {
+          content: "•";
+          font-size: 1.15rem;
+        }
+      }
     }
 
     li {
-      margin-bottom: 0.5em;
+      line-height: 1.5rem;
+      font-size: 1.12rem;
+      margin-bottom: 0.75rem;
+      margin-left: -2.5rem;
+    }
+
+    blockquote {
+      code {
+        font-variant: normal;
+      }
+
+      p {
+        font-size: 1.45rem;
+        line-height: 1.45;
+        max-width: 100%;
+        margin: 1.25rem 0 1.3rem;
+      }
     }
   }
 }
@@ -62,8 +123,16 @@
     margin-top: 3.05rem;
 
     &__content {
-      p {
+      p, ul, ol {
         max-width: 45rem;
+      }
+
+      ol, ul {
+        li {
+          &::before {
+            margin-left: -1rem;
+          }
+        }
       }
     }
   }
@@ -72,7 +141,7 @@
 @media (min-width: $desktop) {
   .post {
     &__content {
-      p {
+      p, ul, ol {
         max-width: 60rem;
       }
     }
