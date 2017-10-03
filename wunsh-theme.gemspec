@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "wunsh-theme"
-  spec.version       = "0.1.15"
+  spec.version       = "0.1.16"
   spec.authors       = ["Wunsh.ru"]
   spec.email         = ["elixir@wunsh.ru"]
 
