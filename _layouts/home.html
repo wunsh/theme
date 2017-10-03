@@ -8,7 +8,7 @@ layout: default
     <div class="posts home__section">
       <h2 class="content__subhead">Самое интересное</h2>
 
-      {% assign main_post = (site.categories["articles"] + site.categories["news"]).first %}
+      {% assign main_post = site.categories["articles"].first %}
 
       {% include post_main.html post=main_post %}
     </div>
