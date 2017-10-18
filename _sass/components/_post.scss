@@ -36,6 +36,20 @@
       color: $header-color;
     }
 
+    a {
+      text-decoration: none;
+      color: $header-color;
+      border-bottom: 1px $header-color solid;
+      padding-bottom: 2px;
+
+      &:hover,
+      &:focus {
+        color: $text-color;
+        cursor: pointer;
+        border-bottom: none;
+      }
+    }
+
     h2 {
       font-size: 1.625em;
       margin: 1.25em 0 0.5em;
