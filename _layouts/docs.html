@@ -5,7 +5,7 @@ layout: default
 <article class="post post--docs" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post__header">
         <h1 class="post__title" itemprop="name headline">
-            {{ page.title }}
+            {{ page.title | markdownify }}
         </h1>
     </header>
 
