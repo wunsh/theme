@@ -22,12 +22,13 @@
 
   &__link {
     display: inline-block;
-    background: $main-color;
+    background: $text-color;
     color: $link-color;
     vertical-align: middle;
     border-radius: 50px;
     text-decoration: none;
     line-height: 36px;
+    padding: .5em 1.25em;
 
     &--contents {
       height: 52px;
@@ -45,6 +46,7 @@
   .docs_nav {
     &__inner {
       margin-left: 25%;
+      padding: 0 2em;
     }
   }
 }

@@ -17,19 +17,26 @@ layout: default
 <nav class="docs_nav pure-g">
     <div class="docs_nav__inner pure-u-1 pure-u-md-3-4">
         <div class="pure-g">
-        {% if page.prev_page %}
             <div class="docs_nav__column docs_nav__column--prev pure-u-1-3">
-                <a href="/docs/{{page.prev_page}}.html" class="docs_nav__link pure-button">&larr; Предыдущий раздел</a>
+                {% if page.prev_page %}
+                    <a href="/docs/{{page.prev_page}}.html" class="docs_nav__link pure-button">
+                        &larr;<span class="h-hidden_mobile"> Назад</span></a>
+                {% endif %}
             </div>
-        {% endif %}
-        <div class="docs_nav__column docs_nav__column--contents pure-u-1-3">
-            <a href="#" class="docs_nav__link docs_nav__link--contents pure-button">☰</a>
-        </div>
-        {% if page.next_page %}
+
+            <div class="docs_nav__column docs_nav__column--contents pure-u-1-3">
+                <a href="#docsContents" class="docs_nav__link docs_nav__link--contents pure-button">☰</a>
+            </div>
+
             <div class="docs_nav__column docs_nav__column--next pure-u-1-3">
-                <a href="/docs/{{page.next_page}}.html" class="docs_nav__link pure-button">Следующий раздел &rarr;</a>
+                {% if page.next_page %}
+                    <a href="/docs/{{page.next_page}}.html" class="docs_nav__link pure-button">
+                        <span class="h-hidden_mobile">Вперёд </span>&rarr;
+                    </a>
+                {% endif %}
             </div>
-        {% endif %}
         </div>
     </div>
 </nav>
+
+{% include modals/docs_contents.html %}

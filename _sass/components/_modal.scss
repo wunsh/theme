@@ -55,4 +55,12 @@
       text-decoration: none;
     }
   }
+
+  &--docs_contents {
+    .modal__content {
+      overflow-y: scroll ;
+      max-height: 80%;
+      margin: 5% auto;
+    }
+  }
 }
