@@ -1,0 +1,10 @@
+<div id="docsContents" class="modal modal--docs_contents modal--close_backdrop">
+    <div class="modal__content">
+        <a href="#close" title="Закрыть" class="modal__close">x</a>
+
+        <h2 class="modal__title">Содержание</h2>
+
+        {% capture docs_contents %}{% include docs_contents.md %}{% endcapture %}
+        {{ docs_contents | markdownify }}
+    </div>
+</div>

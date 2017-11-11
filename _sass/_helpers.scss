@@ -27,3 +27,13 @@
 .h-bold {
   font-weight: bold;
 }
+
+.h-hidden_mobile {
+  display: none;
+}
+
+@media (min-width: $mobile) {
+  .h-hidden_mobile {
+    display: initial;
+  }
+}

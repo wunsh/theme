@@ -1,26 +1,43 @@
 .docs_nav {
   position: fixed;
   height: $docs-nav-height;
+  padding: 6px;
   bottom: 0;
   left: 0;
   right: 0;
 
-  &__inner {
-    background: #fff;
-  }
-
-  &__link {
-    width: 49%;
-    height: 100%;
-    line-height: 2.25;
-    vertical-align: middle;
-
+  &__column {
     &--prev {
-      float: left;
+      text-align: left;
+    }
+
+    &--contents {
+      text-align: center;
     }
 
     &--next {
-      float: right;
+      text-align: right;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    background: $text-color;
+    color: $link-color;
+    vertical-align: middle;
+    border-radius: 50px;
+    text-decoration: none;
+    line-height: 36px;
+    padding: .5em 1.25em;
+
+    &--contents {
+      height: 52px;
+      width: 52px;
+      display: inline-block;
+      border-radius: 50%;
+      font-size: 20px;
+      line-height: 34px;
+      padding: 0.5em 0.75em;
     }
   }
 }
@@ -29,6 +46,7 @@
   .docs_nav {
     &__inner {
       margin-left: 25%;
+      padding: 0 2em;
     }
   }
 }
