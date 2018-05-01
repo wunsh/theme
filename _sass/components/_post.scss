@@ -130,6 +130,19 @@
       }
     }
   }
+
+  &__status {
+    float: left;
+    font-size: 4rem;
+    line-height: 3rem;
+    margin-right: 0.25rem;
+    margin-left: -1.35rem;
+    color: grey;
+
+    &--actual {
+      color: limegreen;
+    }
+  }
 }
 
 @media (min-width: $mobile) {
