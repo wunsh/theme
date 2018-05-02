@@ -3,6 +3,13 @@
   font-weight: normal;
 }
 
+@mixin blockquote-font {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: small-caps;
+}
+
 @mixin text-font {
   font-family: $text-font, serif;
 }

@@ -30,13 +30,11 @@ code {
 }
 
 blockquote {
-  @include header-font;
+  @include blockquote-font;
 
   margin: 1.875rem 0 2.625rem;
   border: 0.1875rem solid $text-color;
   padding: 0 0.9rem;
-  font-variant: small-caps;
-  font-style: normal;
   font-size: 1.2em;
   color: $header-color;
   border-radius: 1px;
