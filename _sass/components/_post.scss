@@ -143,6 +143,10 @@
       color: limegreen;
     }
   }
+
+  &__share_block {
+    margin: 2rem 0 2.5rem;
+  }
 }
 
 @media (min-width: $mobile) {
