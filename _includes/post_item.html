@@ -14,7 +14,7 @@
   </header>
 
   <div class="post_small__description">
-    {% if include.show_cover %}
+    {% if post.cover %}
       <img width="72" height="72" class="post_small__cover" title="{{ post.title }}" src="{{ post.cover }}">
     {% endif %}
     <div class="post_small__text">
