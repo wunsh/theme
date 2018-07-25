@@ -1,27 +1,12 @@
 .tags_cloud {
-  &--colorless {
-    .tag {
-      background: #eee;
-      color: #4b2e39;
-
-      &--ruby { color: #9b111e; }
-      &--practical { color: #00a550; }
-      &--phoenix { color: #ff9900; }
-      &--rails { color: #f80000; }
-      &--beginner { color: #00bfff; }
-      &--advanced { color: #ff0000; }
-      &--overview { color: #7fc7ff; }
-      &--docker { color: #1488c6; }
-      &--howto { color: #2e852e; }
-      &--deploy { color: #4d220e; }
-    }
-  }
+  padding: 20px 0 0;
 
   &--inline {
     margin-left: 1em;
   }
 
   &__list {
+    font-size: 1rem;
     display: inline-block;
     text-align: center;
     margin: 0;
@@ -30,22 +15,18 @@
 }
 
 .tag {
-  color: #4b2e39;
-  font-weight: bold;
   background: #eee;
 
-  padding: 3px 6px;
+  padding: 0 5px;
   border-radius: 3px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  margin-bottom: 4px;
   display: inline-block;
-  line-height: 14px;
+  margin-bottom: 4px;
 
   &:hover,
   &:focus {
     text-decoration: none;
-    opacity: 0.75;
+    background: $main-color;
+    color: #fff;
   }
 }
 

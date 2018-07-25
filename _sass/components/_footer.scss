@@ -1,25 +1,9 @@
-.footer {
-  padding: 1em 0;
+.site-footer {
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
 
-  &--docs {
-    margin-bottom: $docs-nav-height;
-  }
-}
-
-.footer_menu {
-  &__link {
-    color: $text-color;
-    font-size: 80%;
-
-    &:hover,
-    &:focus {
-      background: none;
-    }
-  }
-}
-
-@media (min-width: $mobile) {
-  .footer {
-    text-align: center;
+  p {
+    margin: 0;
   }
 }

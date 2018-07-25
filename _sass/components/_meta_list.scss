@@ -1,23 +1,43 @@
 .meta_list {
   list-style: none;
   padding: 0;
-  margin: 6px 0 22px;
+  margin: 0 0 20px;
+  font-size: 1rem;
 
-  &__item {
-    display: block;
-    margin-right: 22px;
-    line-height: 22px;
+  .tags_cloud__list {
+    margin: 10px 0 0;
   }
 
-  &__item_name {
-    margin-right: 6px;
+  .post_date {
+    font-size: 0.9rem;
   }
-}
 
-@media (min-width: $mobile) {
-  .meta_list {
+  .post_update_date {
+    color: #d04437;
+  }
+
+  .post_source_info {
+    font-size: 0.9rem;
+  }
+
+  .post_info {
+    list-style: none;
+    padding: 0;
+  
     &__item {
       display: inline-block;
+
+      &::before {
+        content: " • ";
+        padding: 0 0.3rem;
+      }
+
+      &:first-child {
+        &::before {
+          content: none;
+          padding: 0;
+        }
+      }
     }
   }
 }

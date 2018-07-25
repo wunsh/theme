@@ -1,0 +1,14 @@
+{% include global_variables.html %}
+
+{% include header/nav.html %}
+
+<section class="page-header">
+  <h1 class="project-name">
+    {% if first_page %}
+      {{ site.name }}
+    {% else %}
+      <a href="{{ site.url }}" class="" title="На главную">{{ site.name }}</a>
+    {% endif %}
+  </h1>
+  <h2 class="project-tagline">{{ site.home_title }}</h2>
+</section>
