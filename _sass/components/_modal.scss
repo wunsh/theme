@@ -11,6 +11,7 @@
      -moz-transition: opacity 150ms ease-in;
           transition: opacity 150ms ease-in;
   pointer-events: none;
+  color: #000;
 
   &:target {
     opacity: 1;
@@ -25,10 +26,12 @@
     padding: 5px 20px 13px 20px;
     background: $link-color;
     border-radius: 3px;
+    line-height: 1.3rem;
   }
 
   &__title {
     margin-top: 0.75rem;
+    font-weight: normal;
   }
 
   &__input {

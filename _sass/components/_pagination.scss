@@ -1,4 +1,20 @@
 .pagination {
   text-align: center;
-  margin-bottom: 1.75rem;
+  padding: 20px 0 0;
+  font-size: 0.9rem;
+
+  span, a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #eee;
+    font-style: normal;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 2px;
+  }
+
+  .active, a:hover {
+    background: $main-color;
+    color: #fff;
+  }
 }

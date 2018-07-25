@@ -8,7 +8,7 @@
 
   &__column {
     &--prev {
-      text-align: left;
+      text-align: right;
     }
 
     &--contents {
@@ -16,19 +16,23 @@
     }
 
     &--next {
-      text-align: right;
+      text-align: left;
     }
   }
 
   &__link {
     display: inline-block;
-    background: $text-color;
+    background: $main-color;
     color: $link-color;
     vertical-align: middle;
     border-radius: 50px;
     text-decoration: none;
     line-height: 36px;
     padding: .5em 1.25em;
+
+    @at-root a#{&} {
+      text-decoration: none;
+    }
 
     &--contents {
       height: 52px;
@@ -45,7 +49,6 @@
 @media (min-width: $mobile) {
   .docs_nav {
     &__inner {
-      margin-left: 25%;
       padding: 0 2em;
     }
   }

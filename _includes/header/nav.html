@@ -1,0 +1,21 @@
+<nav class="nav">
+  <ul class="nav_list">
+    {% for item in site.data.nav %}
+      {% if item.section_id == page.section_id %}
+        {% assign active_class = "active" %}
+      {% else %}
+        {% assign active_class = "" %}
+      {% endif %}
+
+      {% if item.children %}
+        <li class="nav_list__item {{ active_class }}">
+          <a href="{{ site.url }}/{{ item.path }}" data-popover="#{{ item.section_id }}" class="nav_list__item_link">{{ item.name }}</a>
+        </li>
+      {% else %}
+        <li class="nav_list__item {{ active_class }}">
+          <a href="{{ site.url }}/{{ item.path }}" class="nav_list__item_link">{{ item.name }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

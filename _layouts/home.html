@@ -5,18 +5,11 @@ layout: default
 
 <div class="home">
   {% if first_page %}
-    <div class="posts home__section">
+    <div class="posts home__section best_post">
       <h2 class="content__subhead">Самое интересное</h2>
 
-      {% assign main_post = site.categories["articles"].first %}
-
-      {% include post_main.html post=main_post %}
-    </div>
-  {% endif %}
-
-  {% if first_page %}
-    <div class="home__section">
-      {% include intro.html %}
+      {% assign post = site.categories["articles"].first %}
+      {% include post_item.html %}
     </div>
   {% endif %}
 
@@ -24,7 +17,7 @@ layout: default
     <h2 class="content__subhead">Новые посты</h2>
 
     {% for post in paginator.posts limit: (per_page - offset) offset: offset %}
-      {% include post_list.html post=post %}
+      {% include post_item.html %}
     {% endfor %}
   </div>
 
@@ -32,11 +25,7 @@ layout: default
     {% include pagination.html %}
   </div>
 
-  <div class="home__section tags_cloud tags_cloud--colorless">
+  <div class="home__section tags_cloud">
     {% include tags_cloud.html %}
-  </div>
-
-  <div class="home__section">
-    <h1 class="home__title">{{ site.home_title }}</h1>
   </div>
 </div>

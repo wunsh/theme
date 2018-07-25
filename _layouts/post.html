@@ -7,63 +7,62 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post__header">
     {% if page.elixir_version and site.elixir_version == page.elixir_version %}
-    <span class="post__status post__status--actual">·</span>
+      <span class="post__status post__status--actual">·</span>
     {% endif %}
+
     <h1 class="post__title" itemprop="name headline">{{ page.title }}</h1>
 
     <div class="post__meta post_meta">
       <ul class="meta_list">
         <li class="meta_list__item">
-          {% if page.date %}
-          <span class="">
-            <small class="meta_list__item_name">Дата</small>
-            <time class="h-bold" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-              {% include translated_date.html date=page.date format="%d %B %Y" %}
-            </time>
-          </span>
-          {% endif %}
+          <ul class="post_info">
+            {% if page.date %}
+              <li class="post_info__item">
+                <span class="post_date">
+                  <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {% include translated_date.html date=page.date format="%d %B %Y" %}
+                  </time>
+                </span>
+              </li>
+            {% endif %}
 
-          {% if page.update_date %}
-          <span class="">
-            <small class="meta_list__item_name">Дата последнего обновления</small>
-            <time class="h-bold" datetime="{{ page.update_date | date_to_xmlschema }}" itemprop="datePublished">
-              {% include translated_date.html date=page.update_date format="%d %B %Y" %}
-            </time>
-          </span>
-          {% endif %}
-        </li>
-        {% if page.tags.size > 0 %}
-        <li class="meta_list__item">
-            <span class="tag_cloud tags_cloud--inline h-no_margin">
-              <small class="meta_list__item_name">Теги</small> {% include tags_cloud.html post_tags=page.tags %}
-            </span>
-        </li>
-        {% endif %}
-        <li class="meta_list__item">
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <small class="meta_list__item_name">
-              {% if page.source_url %}
-                Перевод
-              {% elsif author %}
-                Автор
-              {% endif %}
-            </small>
-            <span itemprop="name" class="h-bold">{{ author.name }}</span>
-          </span>
-        </li>
+            {% if page.update_date %}
+              <li class="post_info__item">
+                <span class="post_date post_update_date">
+                  обновлено
+                  <time datetime="{{ page.update_date | date_to_xmlschema }}" itemprop="datePublished">
+                    {% include translated_date.html date=page.update_date format="%d %B %Y" %}
+                  </time>
+                </span>
+              </li>
+            {% endif %}
 
-        <li class="meta_list__item">
-          {% if page.source_author %}
-            <div >
-              <small>Оригинал</small>
-              <strong>
-                &laquo;<a href="{{ page.source_url }}" style="text-transform: none; text-decoration: underline; color: #4b2e39;">{% if page.source_title %}{{ page.source_title }}{% else %}{{ page.source_url }}{% endif %}</a>&raquo;
-              </strong>
-              <small>&copy;</small>
-              <strong>{{ page.source_author }}</strong>
+            {% if author.name %}
+              <li class="post_info__item">
+                <span class="post_autor" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">{{ author.name }}</span>
+                </span>
+              </li>
+            {% endif %}
+          </ul>
+       </li>
+
+        {% if page.source_author %}
+          <li class="meta_list__item">
+            <div class="post_source_info">
+              Оригинал:
+              &laquo;<a href="{{ page.source_url }}">{% if page.source_title %}{{ page.source_title }}{% else %}{{ page.source_url }}{% endif %}</a>&raquo;
+              &copy;
+              {{ page.source_author }}
             </div>
-          {% endif %}
-        </li>
+          </li>
+        {% endif %}
+
+        {% if page.tags.size > 0 %}
+          <li class="meta_list__item">
+            {% include tags_cloud.html post_tags=page.tags %}
+          </li>
+        {% endif %}
       </ul>
     </div>
   </header>

@@ -3,23 +3,21 @@
 @charset "utf-8";
 
 @import "variables";
-@import "mixins";
 @import "helpers";
 @import "buttons";
-@import "syntax_highlighting";
-@import "main";
+/*@import "syntax_highlighting";*/
 
-@import "components/menu";
 @import "components/menu_pills";
-@import "components/home";
-@import "components/footer";
 @import "components/content";
 @import "components/post";
 @import "components/post_small";
 @import "components/meta_list";
-@import "components/intro";
 @import "components/tags_cloud";
 @import "components/pagination";
 @import "components/modal";
 @import "components/docs_nav";
 @import "components/share_block";
+@import "components/nav";
+@import "components/subscribe";
+@import "components/footer";
+@import "components/header";

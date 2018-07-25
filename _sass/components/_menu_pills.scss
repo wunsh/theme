@@ -1,24 +1,26 @@
 .menu-pills {
   &__item {
-    background: #eee;
-    font-size: 1.25rem;
     border-radius: 0.25rem !important;
     margin-right: 0.2rem;
 
     &.pure-menu-selected {
       color: #fff;
-      background: $header-color;
+      background: $main-color;
       padding: 0.5rem 1rem;
     }
 
     a {
-      color: $header-color;
+      color: #000;
       padding: 0;
       border: none !important;
       padding: 0.5rem 1rem !important;
+      text-decoration: none;
+      border-radius: 0.25rem !important;
+      background: #eee;
 
       &:hover {
-        background: $grey-color;
+        color: #fff;
+        background-color: $main-color;
       }
     }
   }

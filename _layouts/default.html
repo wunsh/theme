@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
   {% include head.html %}
-
   <body>
-    <div class="wunsh pure-g">
-      {% include menu.html %}
+    {% include header.html %}
 
-      <div class="content pure-u-1 pure-u-md-3-4">
-        {{ content }}
+    <section class="main-content">
+      {{ content }}
+    </section>
 
-        {% include footer.html %}
-        {% include modals.html %}
-        {% include scripts.html %}
-        {% include counters.html %}
-      </div>
-    </div>
+    {% include footer.html %}
+
+    {% include modals.html %}
+    {% include scripts.html %}
+    {% include counters.html %}
   </body>
 </html>

@@ -1,20 +1,15 @@
-.content {
-  padding: 2em 1em 0;
+.main-content {
+  padding: 1rem 3rem;
 
-  &__subhead {
-    text-transform: uppercase;
-    color: $text-color;
-    border-bottom: 1px solid $link-color;
-    padding: 0.4em 0;
-    font-size: 80%;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 1rem;
   }
-}
 
-@media (min-width: $mobile) {
-  .content {
-    padding: 1em 2em 0;
-    margin-left: 25%;
+  ol {
+    padding-left: 20px;
+  }
+
+  figure.highlight {
+    margin: 0 0 1rem;
   }
 }
